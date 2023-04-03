@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
 import ErrorPage from './pages/ErrorPage'
+import { UserInfo } from './UserInfo'
+
 
 function App() {
     return (
@@ -18,9 +20,9 @@ function App() {
                     </li>
                 </ul>
             </nav>
-
+             <UserInfo.Provider value={"Richard"}>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={ <Home />} />
                 {/*             <Route path="/" element={<div><h1>Hej du har kommmit hem</h1></div>} />
 
  */}
@@ -29,6 +31,7 @@ function App() {
                 {/* Vi lägger en stjärna i path för att komma till en bestämd sida om ej url finns */}
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
+            </UserInfo.Provider>
         </>
     )
 }
