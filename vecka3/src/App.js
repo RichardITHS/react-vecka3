@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
-import Home from './pages/Home'
+import Home from './pages/Home.tsx'
 import About from './pages/About'
 import Products from './pages/Products'
 import ErrorPage from './pages/ErrorPage'
@@ -22,7 +22,7 @@ function App() {
             </nav>
              <UserInfo.Provider value={"Richard"}>
             <Routes>
-                <Route path="/" element={ <Home />} />
+                <Route path="/" element={ <Home firstname={"Richard"} counter={1} />} />
                 {/*             <Route path="/" element={<div><h1>Hej du har kommmit hem</h1></div>} />
 
  */}
